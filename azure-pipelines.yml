@@ -1,4 +1,4 @@
-# Docker
+  # Docker
 # Build a Docker image
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
@@ -35,3 +35,5 @@ stages:
 #
 #         docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/Library/Caches:/root/.cache/ aquasec/trivy --exit-code 1 --severity CRITICAL --ignore-unfixed $(containerRegistry)/$(imageRepository):$(tag)
     - task: trivy@1
+      inputs:
+        image: ubuntu
